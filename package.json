@@ -1,0 +1,18 @@
+{
+  "name": "trusttrace-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TrustTrace AI - Advanced AI Scam Detection & Digital Safety Platform",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter server dev\" \"pnpm --filter client dev\"",
+    "build": "pnpm --filter shared build && pnpm --filter server build && pnpm --filter client build",
+    "test": "pnpm --filter server test",
+    "start": "pnpm --filter server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
